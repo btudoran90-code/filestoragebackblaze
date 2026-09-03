@@ -8,6 +8,15 @@ here.
 SigV4 over `fetch`). Provider: Backblaze B2. The same script works with
 Cloudflare R2, AWS, or MinIO — only `S3_ENDPOINT` changes.
 
+The repo is public, so a session that does not have it attached can fetch the
+client in one command:
+
+```bash
+curl -sSL -o store.mjs https://raw.githubusercontent.com/btudoran90-code/filestoragebackblaze/main/store.mjs
+```
+
+Public is the code only. The credentials stay in the environment settings.
+
 ## Using it
 
 Credentials come from the claude.ai environment settings: `S3_ENDPOINT`,

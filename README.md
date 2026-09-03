@@ -62,15 +62,20 @@ comportamentul dorit, iar `buckets` spune asta în loc să dea eroare.
 
 ## Folosire dintr-o altă sesiune Claude Code
 
-Repo-ul e privat, deci trebuie atașat la sesiune înainte de folosire (`add_repo`
-pentru `btudoran90-code/filestoragebackblaze`, apoi clonare). După aceea:
+Repo-ul e public, deci scriptul se ia cu o singură comandă, fără să atașezi
+repo-ul și fără token:
 
 ```bash
-node /home/user/filestoragebackblaze/store.mjs ls
+curl -sSL -o store.mjs https://raw.githubusercontent.com/btudoran90-code/filestoragebackblaze/main/store.mjs
+node store.mjs ls
 ```
 
-Dacă vrei să poți lua scriptul cu o singură comandă, fără atașare, fă repo-ul
-public: codul nu conține secrete, doar semnare S3 standard.
+Cheile rămân în environment settings, private. Public e doar codul, care nu
+conține niciun secret — doar semnare S3 standard.
+
+Alternativ, dacă lucrezi mai mult în repo, atașează-l la sesiune și rulează
+`node /home/user/filestoragebackblaze/store.mjs`. Așa se încarcă și `CLAUDE.md`,
+deci sesiunea știe singură convențiile de mai jos.
 
 ## Convenții
 
