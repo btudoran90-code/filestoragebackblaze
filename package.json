@@ -1,0 +1,19 @@
+{
+  "name": "filestoragebackblaze",
+  "version": "1.0.0",
+  "description": "Dependency-free S3 client used by Claude Code sessions to keep downloaded files in a Backblaze B2 bucket",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "store": "store.mjs"
+  },
+  "files": [
+    "store.mjs"
+  ],
+  "scripts": {
+    "store": "node store.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
